@@ -20,19 +20,11 @@ class Card extends Component {
     }
 
     render() {
-
-        return (
-            <div className="card">
-                <h1>{this.state.color}</h1>
-                <input onChange={(event) => this.handleInputChange(event)}/>
-            </div>
-        );
-
         return(
             <div className="card">
                 <h1>{this.state.color}</h1>
-                { Input('Color') }
-                { Input('Plural Noun') }
+                { Input('Color', this.state.color, this.handleInputChange, 'color') }
+                { Input('Plural Noun', this.state.pluralNoun, this.handleInputChange, 'pluralNoun') }
             </div>
         )
     }
