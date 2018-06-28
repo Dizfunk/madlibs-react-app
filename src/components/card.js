@@ -44,10 +44,9 @@ class Card extends Component {
         if(this.state.contentVisible) {
             this.setState(INITIAL_STATE)
         } else {
-            this.setState ({ contentVisible: true })
+            this.setState ({ contentVisible: true });
         }
 
-        this.setState({ contentVisible: !this.state.contentVisible })
     }
 
     render() {
@@ -64,9 +63,9 @@ class Card extends Component {
             {title: 'Number', state: this.state.numberTwo, name: 'numberTwo'},
 
             {title: 'Noun', state: this.state.nounTwo, name: 'nounTwo'},
-            {title: 'Adjective', state: this.state.pluralNoun, name: 'adjectiveThree'},
+            {title: 'Adjective', state: this.state.adjectiveThree, name: 'adjectiveThree'},
             {title: 'Celebrity', state: this.state.celebTwo, name: 'celebTwo'},
-            {title: 'Celebrity', state: this.state.celebOne, name: 'celebThree'},
+            {title: 'Celebrity', state: this.state.celebThree, name: 'celebThree'},
 
             {title: 'Adjective', state: this.state.adjectiveFour, name: 'adjectiveFour'},
             {title: 'Noun', state: this.state.nounThree, name: 'nounThree'},
@@ -84,7 +83,7 @@ class Card extends Component {
                     })
                 }
             </div>
-            <button type="submit">{this.state.contentVisible ? 'Generate MadLib' : 'Clear Form'}</button>
+            <button type="submit">{!this.state.contentVisible ? 'Generate MadLib' : 'Clear Form'}</button>
                 {
                     this.state.contentVisible ?  <Content data={this.state}/> : ''
                 }

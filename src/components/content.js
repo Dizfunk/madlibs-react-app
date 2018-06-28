@@ -4,7 +4,7 @@ class Content extends Component {
     render() {
         const data = this.props.data;
        //this.props.data.map((object,index) => {
-         //   console.log(index);
+        //   console.log(index);
         //})
         // <span>{data.indexOf(data.color)}</span>
         return (
